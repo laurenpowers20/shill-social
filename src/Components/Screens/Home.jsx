@@ -7,12 +7,11 @@ import "./Home.css";
 function Home({ setToggleApiCall, post, toggleApiCall }) {
 	return (
 		<div className="home">
-			<Sidebar />
-			<Feed
-				setToggleApiCall={setToggleApiCall}
-				post={post}
-				toggleApiCall={toggleApiCall}
-			/>
+      <Sidebar />
+      <Feed
+        setToggleApiCall={setToggleApiCall}
+        post={post}
+        toggleApiCall={toggleApiCall}/>
 			<Widget />
 		</div>
 	);

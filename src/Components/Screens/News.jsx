@@ -3,7 +3,7 @@ import Sidebar from "../../Sidebar";
 import NewsList from "./NewsList";
 import Widget from "../Widgets/Widget";
 import "../Profile/ProfilePage.css";
-import "./News.css";
+import "./newsItem.css";
 
 function News() {
 	return (
