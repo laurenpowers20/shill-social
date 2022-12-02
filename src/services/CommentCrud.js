@@ -1,9 +1,22 @@
 import api from "./apiConfig.js";
+import Cookies from 'js-cookie'
+import axios from "axios";
 
-export const getComments = async () => { //pagination django rest limits all posts to (10)
+async function filterComments(list,postID) {
+  let commentsAssociatedWithPost = []
+  for (let i = 0; i < list.data.length; i++){
+    if (list.data[i]["title"] == postID) {
+      commentsAssociatedWithPost.push(list.data[i]["id"])
+    }
+  }
+  return commentsAssociatedWithPost
+  
+}
+export const getComments = async (postID) => { 
   try {
-    const response = await api.get("/comments");
-    return response.data;
+    let response = await axios.get("https://twitter-clone-backend-production-c9cc.up.railway.app/allcomments/")
+    let nextFunction = await filterComments(response,postID)
+    return nextFunction
   } catch (error) {
     throw error;
   }
@@ -18,10 +31,18 @@ export const getComment = async (id) => {//post id
   }
 };
 
-export const createComment = async (commentData) => { //date time auto, likes = 0 default
+export const createComment = async (content) => {
   try {
-    const response = await api.post("/comments", commentData);
-    return response.data;
+    if (Cookies.get("AccessToken") === undefined || Cookies.get("AccessToken") === "loggedout") {
+      alert("Please log in to create a post!")
+    }
+    const config = {
+      headers: {
+        "Authorization": `Bearer ${Cookies.get("AccessToken")}`,
+      },
+    };
+    let response = await axios.post(`https://twitter-clone-backend-production-c9cc.up.railway.app/user/comments`, content, config)
+    return response
   } catch (error) {
     throw error;
   }

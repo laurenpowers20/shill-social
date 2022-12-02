@@ -1,13 +1,15 @@
 body {
 	--twitter-color: #7ed957;
 	--money-color: #7ed957;
-
 	--twitter-background: #e6ecf0;
 }
 
 .app {
 	height: 100vh;
-	overflow: auto;
+	max-width: 1300px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 10px;
 }
 
 @media only screen and (max-width: 600px) {

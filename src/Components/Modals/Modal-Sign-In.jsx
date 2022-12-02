@@ -20,9 +20,10 @@ function Modal(props) {
 			};
 			const response = await doLogin(credentials);
 			let accessToken = response.data.tokens;
-			let emailOwner = response.data.email;
+      let emailOwner = response.data.email;
+      let AccountID = response.data.id
 			emailOwner = emailOwner.toString();
-			Cookies.set("userEmail", emailOwner);
+      Cookies.set("userEmail", emailOwner);
 			accessToken = accessToken.split("'");
 			if (response.data.email === Inputemail) {
 				console.log(response.data);

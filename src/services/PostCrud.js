@@ -39,11 +39,24 @@ export const getPosts = async () => {
     throw error;
   }
 };
-
-export const getpost = async (id) => {
+export const fetchUserPosts = async (user) => {
   try {
-    const response = await api.get(`/post/${id}`);
-    return response.data;
+    let response = await axios.get("https://twitter-clone-backend-production-c9cc.up.railway.app/user/")
+    for (let i = 0; i < response.data.length; i++){
+      if (response.data[i]["username"] === user) {
+        return response.data[i]["id"]
+      }
+    }
+  } catch (error) {
+    throw error;
+  }
+};
+
+
+export const getPostByID = async (id) => {
+  try {
+    let response = await axios.get("https://twitter-clone-backend-production-c9cc.up.railway.app/allposts/" + id)
+    return response.data
   } catch (error) {
     throw error;
   }

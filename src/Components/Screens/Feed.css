@@ -1,6 +1,7 @@
 .feed-container {
 	overflow: scroll;
 	width: 50%;
+  height: 2000px;
 }
 
 .edit-profile {

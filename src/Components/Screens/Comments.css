@@ -1,0 +1,30 @@
+.determineWidth{
+  width: 640px;
+}
+
+.image {
+  width: 200px;
+  height: 300px;
+  object-fit: scale-down;
+  margin: auto;
+  display: block;
+}
+
+.postComments-container {
+  margin: 30px;
+  border: 1px solid green;
+  position: relative;
+}
+
+.comments-inner {
+  text-align: center;
+}
+.comments{
+  margin:4px, 4px;
+  padding:4px;
+  width: 500px;
+  height: 110px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align:justify;
+}

@@ -12,9 +12,8 @@
 }
 
 .post-container {
-	margin: 30px;
-	border: 4px double green;
-	border-radius: 25px;
+  margin: 30px;
+  border: 1px solid green;
 }
 
 .buttonsContainer {
