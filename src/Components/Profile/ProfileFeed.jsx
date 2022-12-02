@@ -71,6 +71,25 @@ function ProfileFeed({ setToggleApiCall, toggleApiCall, post}) {
         {displayPost === undefined && <>
           <div>No Tweeds Yet</div>
         </>}
+        
+	return (
+		<div className="feed-container">
+			<div className="feed">
+				<div className="edit-profile">
+					<h1>@{Cookies.get("User")}</h1>
+					<button>Edit Profile</button>
+				</div>
+				<p>Joined {createdDate}</p>
+				<h2 className="tweed-title">Your Tweeds</h2>
+				<div className="post">
+					{updatedPost != null && (
+						<>
+							{updatedPost.map((post, i) => (
+								<div key={i} className="post-container">
+									<div className="post">
+										<div className="username">{post.owner}</div>
+										<div className="postText"></div>
+										{post.text}
 
         </div>
       </div>

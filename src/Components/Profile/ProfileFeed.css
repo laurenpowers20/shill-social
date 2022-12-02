@@ -10,7 +10,11 @@
 
 
 .tweed-title {
-	align-items: center;
+	text-align: center;
+  font-size: 26px;
+  color:#417e26ed;
+  text-decoration: underline;
+  text-shadow: 4px;
 }
 
 .feed {

@@ -38,15 +38,3 @@
 	width: 100%;
 	object-fit: cover;
 }
-
-.editPostButton{
-  width: 110px;
-	border-radius: 25px !important;
-	background-color:#589a3c !important;
-	border-color: #7ed957 !important;
-	color: white !important;
-	height: 40px !important;
-	position: initial !important;
-  display: inline;
-  margin: auto ;
-}
