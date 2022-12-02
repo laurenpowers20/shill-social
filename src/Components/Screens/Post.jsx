@@ -26,16 +26,19 @@ function Post({ post }) {
         {post.map((post,i) => (
           <div key = { i } className="post-container">
             <div className="post">
+              <br></br>
               <div className="username">
                 {post.owner}
               </div>
+              <br></br>
               <div className="postText"></div>
               {post.text}
               <div className="postText"></div>
               <div className="postImageURL">
                 {post.title != "Text" && <>
-                  <img src={post.title} /></>}
+                  <img class = "image" src={post.title} /></>}
               </div>
+              <br></br>
               <div className ="buttonsContainer"> 
               <button className= 'commentsButton'>Comments</button>
               {post != null && post.owner === Cookies.get("userEmail") && <>
@@ -45,9 +48,10 @@ function Post({ post }) {
                 editID = {editID}
                 onClose={() => setShowEdit(false)}
                 show={showEdit}/>
-                <button className= "editPostButton" id= {post.id} onClick= {doEdit} >Edit Post</button></>}
+                  <button className="editPostButton" id={post.id} onClick={doEdit} >Edit Post</button></>}
             </div>
             </div>
+            <br></br>
           </div>
       ))}
       </>}

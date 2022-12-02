@@ -8,7 +8,7 @@ function Home({setToggleApiCall, post , toggleApiCall}) {
 
 	return (
 		<div className="home">
-			<Sidebar />
+      <Sidebar />
       <Feed
         setToggleApiCall={setToggleApiCall}
         post={post}
