@@ -20,10 +20,10 @@ function Modal(props) {
 			};
 			const response = await doLogin(credentials);
 			let accessToken = response.data.tokens;
-      let emailOwner = response.data.email;
-      let AccountID = response.data.id
+			let emailOwner = response.data.email;
+			let AccountID = response.data.id;
 			emailOwner = emailOwner.toString();
-      Cookies.set("userEmail", emailOwner);
+			Cookies.set("userEmail", emailOwner);
 			accessToken = accessToken.split("'");
 			if (response.data.email === Inputemail) {
 				console.log(response.data);
@@ -64,11 +64,17 @@ function Modal(props) {
 							onChange={handleChange}
 							id="password"
 							placeholder="Password"></input>
-            <br></br>
-            {/* <input type="submit" className="modal-button" value="Sign In" /> */}
-            <div className="button-container">
-				<input type="submit" className="modal-button" value="Sign In" />
-            </div>
+						<br></br>
+						{/* <input type="submit" classNclassNameme="modal-button" value="Sign In" /> */}
+						<div classNclassNameme="button-container">
+							<inputclassName
+								type="submit"
+								className="modal-button"
+								className
+								value="Sign In"
+							/>
+							className
+						</div>
 					</form>
 				</div>
 				<Button onClick={props.onClose} className="modal-button">

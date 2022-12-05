@@ -21,7 +21,7 @@ function Widgets() {
 			setCoins(res.data);
 			if (pathname === "/crypto") {
 				document.querySelectorAll(".hidden-mobile").forEach((card) => {
-					card.classList.remove("hidden-mobile");
+					card.classNameList.remove("hidden-mobile");
 				});
 				// document.querySelector(".hidden-mobile").style.width = "100%"
 			}

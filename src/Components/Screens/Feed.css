@@ -1,7 +1,7 @@
 .feed-container {
+	height: 2000px;
 	overflow: scroll;
 	width: 50%;
-  height: 2000px;
 }
 
 .edit-profile {
@@ -14,9 +14,9 @@
 }
 
 .feed {
-	flex: 0.9;
-	border-right: 1px solid var(--twitter-background);
 	border-left: 1px solid var(--twitter-background);
+	border-right: 1px solid var(--twitter-background);
+	flex: 0.9;
 	min-width: fit-content;
 }
 
@@ -25,21 +25,21 @@
 }
 
 .feed-header {
-	top: 0;
 	background-color: white;
 	border: 1px solid var(--twitter-background);
 	padding: 15px 20px;
+	top: 0;
 }
 
 .feed-header > h2 {
-	font-weight: 800;
 	font-size: 20px;
+	font-weight: 800;
 }
 
 @media only screen and (max-width: 600px) {
 	.feed-container {
-		width: 100%;
 		margin: 0;
 		padding: 0;
+		width: 100%;
 	}
 }

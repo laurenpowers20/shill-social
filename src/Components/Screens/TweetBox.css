@@ -7,7 +7,6 @@
 
 .form {
   height: 100px;
-  height:100px;
   margin: 0 auto;
 }
 .tweetBox {
@@ -16,16 +15,13 @@
 }
 
 .tweetBox-input > textarea {
-  /* resize: none;
-.tweetBox-input > textarea {
 	resize: none;
->>>>>>> 6e20e5dc73cae92219a52ddd626079af937fdd7b
 	flex: 1;
 	margin-left: 10px;
 	font-size: 20px;
 	border: none;
 	width: 100%;
-	padding-left: 10px; */
+	padding-left: 10px;
   text-align: center;
 }
 
