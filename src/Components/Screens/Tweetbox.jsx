@@ -68,16 +68,15 @@ function Tweetbox({ setToggleApiCall, toggleApiCall }) {
 						size="2rem"
 						onChange={handleChange}
 					/>
-
+					<input
+						id="image"
+						className="tweetBox-inputImage"
+						placeholder="Enter image URL"
+						type="text"
+						onChange={handleChange}
+					/>
 					<p className="character-counter">{characterCount}/280</p>
 				</div>
-				<input
-					id="image"
-					className="tweetBox-inputImage"
-					placeholder="Enter image URL"
-					type="text"
-					onChange={handleChange}
-				/>
 				<Button
 					variant="outlined"
 					className="feed_tweet_BTN"
@@ -85,7 +84,6 @@ function Tweetbox({ setToggleApiCall, toggleApiCall }) {
 					fullWidth>
 					Post
 				</Button>
-				<input className="submitButton" type="submit" />
 			</form>
 		</div>
 	);
