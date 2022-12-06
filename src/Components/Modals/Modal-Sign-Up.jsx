@@ -4,18 +4,18 @@ import React, { useState } from "react";
 import { doRegister } from "../../services/UserFunctions";
 
 function SignUpModal(props) {
-	const [Inputemail, setEmail] = useState("");
-	const [Inputpassword, setPassword] = useState("");
-	const [Inputusername, setUsername] = useState("");
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
+	const [username, setUsername] = useState("");
 
 	const doRegistering = async (event) => {
 		console.log("Registering...");
 		event.preventDefault();
 		try {
 			const credentials = {
-				email: Inputemail,
-				username: Inputusername,
-				password: Inputpassword,
+				email: email,
+				username: username,
+				password: password,
 			};
 			const response = await doRegister(credentials);
 			if (response.status === 201) {

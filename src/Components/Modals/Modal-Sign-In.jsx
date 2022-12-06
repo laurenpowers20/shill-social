@@ -5,8 +5,8 @@ import React, { useState } from "react";
 import Cookies from "js-cookie";
 
 function Modal(props) {
-	const [Inputemail, setEmail] = useState("");
-	const [Inputpassword, setPassword] = useState("");
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
 	if (!props.show) {
 		return null;
 	}
@@ -15,8 +15,8 @@ function Modal(props) {
 		console.log("Logging in...");
 		try {
 			const credentials = {
-				email: Inputemail,
-				password: Inputpassword,
+				email: email,
+				password: password,
 			};
 			const response = await doLogin(credentials);
 			let accessToken = response.data.tokens;
@@ -25,7 +25,7 @@ function Modal(props) {
 			emailOwner = emailOwner.toString();
 			Cookies.set("userEmail", emailOwner);
 			accessToken = accessToken.split("'");
-			if (response.data.email === Inputemail) {
+			if (response.data.email === email) {
 				console.log(response.data);
 				console.log("Logged in... Token is " + accessToken[7]);
 				Cookies.set("AccessToken", accessToken[7].toString());
@@ -65,7 +65,6 @@ function Modal(props) {
 							id="password"
 							placeholder="Password"></input>
 						<br></br>
-						{/* <input type="submit" className="modal-button" value="Sign In" /> */}
 					</form>
 					<div className="button-container">
 						<input type="submit" className="modal-button" value="Sign In" />

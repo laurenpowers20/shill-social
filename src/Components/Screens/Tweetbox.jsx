@@ -58,11 +58,11 @@ function Tweetbox({ setToggleApiCall, toggleApiCall }) {
 
 	return (
 		<div className="tweetBox">
-			<form className="form" onSubmit={doSubmit}>
+			<form onSubmit={doSubmit}>
 				<div className="tweetBox-input">
 					<textarea
-						id="text"
 						className="tweetBox-input"
+						id="text"
 						placeholder="What's happening, tweed?"
 						type="text"
 						size="2rem"
@@ -75,8 +75,8 @@ function Tweetbox({ setToggleApiCall, toggleApiCall }) {
 						type="text"
 						onChange={handleChange}
 					/>
-					<p className="character-counter">{characterCount}/280</p>
 				</div>
+				<p className="character-counter">{characterCount}/280</p>
 				<Button
 					variant="outlined"
 					className="feed_tweet_BTN"
