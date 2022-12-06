@@ -5,9 +5,9 @@ import axios from "axios";
 async function filterComments(list,postID) {
   let commentsAssociatedWithPost = []
   for (let i = 0; i < list.data.length; i++){
-    if (list.data[i]["title"] == postID) {
-      commentsAssociatedWithPost.push(list.data[i]["id"])
-    }
+    if (list.data[i]["title"] === postID) {
+			commentsAssociatedWithPost.push(list.data[i]["id"]);
+		}
   }
   return commentsAssociatedWithPost
 };
