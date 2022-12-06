@@ -4,14 +4,8 @@ import Button from "@mui/material/Button";
 import { createPost } from "../../services/PostCrud";
 import { useState } from "react";
 
-function Tweetbox({
-	setToggleApiCall,
-	toggleApiCall,
-	post,
-	characterCount,
-	setCharacterCount,
-}) {
-	// const [characterCount, setCharacterCount] = useState(0);
+function Tweetbox({ setToggleApiCall, toggleApiCall }) {
+	const [characterCount, setCharacterCount] = useState(0);
 	const [imageURL, setImageURL] = useState("");
 	const [text, setText] = useState("");
 
@@ -55,6 +49,7 @@ function Tweetbox({
 	const handleChange = (event) => {
 		if (event.target.id === "text") {
 			setText(event.target.value);
+			setCharacterCount(event.target.value.length);
 		}
 		if (event.target.id === "image") {
 			setImageURL(event.target.value);
@@ -83,14 +78,13 @@ function Tweetbox({
 					type="text"
 					onChange={handleChange}
 				/>
-				{/* <Button
-          variant="outlined"
-          className="feed_tweet_BTN"
-          type="submit"
-          fullWidth
-        >
-          Post
-        </Button> */}
+				<Button
+					variant="outlined"
+					className="feed_tweet_BTN"
+					type="submit"
+					fullWidth>
+					Post
+				</Button>
 				<input className="submitButton" type="submit" />
 			</form>
 		</div>

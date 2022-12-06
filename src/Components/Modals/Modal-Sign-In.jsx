@@ -65,17 +65,11 @@ function Modal(props) {
 							id="password"
 							placeholder="Password"></input>
 						<br></br>
-						{/* <input type="submit" classNclassNameme="modal-button" value="Sign In" /> */}
-						<div classNclassNameme="button-container">
-							<inputclassName
-								type="submit"
-								className="modal-button"
-								className
-								value="Sign In"
-							/>
-							className
-						</div>
+						{/* <input type="submit" className="modal-button" value="Sign In" /> */}
 					</form>
+					<div className="button-container">
+						<input type="submit" className="modal-button" value="Sign In" />
+					</div>
 				</div>
 				<Button onClick={props.onClose} className="modal-button">
 					Close

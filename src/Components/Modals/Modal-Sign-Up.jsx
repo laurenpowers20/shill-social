@@ -71,13 +71,8 @@ function SignUpModal(props) {
 							onChange={handleChange}
 							placeholder="Create Password"></input>
 						<br></br>
-						<div classNclassNameme="button-container">
-							<inputclassName
-								type="submit"
-								className="modal-button"
-								value="Sign Up"
-							/>
-							className
+						<div className="button-container">
+							<input type="submit" className="modal-button" value="Sign Up" />
 						</div>
 					</form>
 				</div>

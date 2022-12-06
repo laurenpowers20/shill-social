@@ -67,7 +67,7 @@ function ProfileFeed({ setToggleApiCall, toggleApiCall, post }) {
 										</div>
 										<div>{displayPost.text}</div>
 										<div>{displayPost.date}</div>
-										{displayPost.title != "Text" && (
+										{displayPost.title !== "Text" && (
 											<>
 												<img src={displayPost.title} />
 											</>

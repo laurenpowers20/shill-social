@@ -1,10 +1,10 @@
 import React from "react";
-import "./Postdetail.css";
+import "./PostDetail.css";
 import Sidebar from "../../Sidebar";
 import Widget from "../Widgets/Widget";
 import Comments from "./Comments";
 
-function Postdetail({ setpostID, postID }) {
+function PostDetail({ setpostID, postID }) {
 	return (
 		<div className="postdetail">
 			<Sidebar />
@@ -14,4 +14,4 @@ function Postdetail({ setpostID, postID }) {
 	);
 }
 
-export default Postdetail;
+export default PostDetail;

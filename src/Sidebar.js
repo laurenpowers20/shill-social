@@ -9,7 +9,7 @@ import Logo from "./shill.png";
 import ModalCreateTweet from "./Components/Modals/Modal-Create-Tweet";
 import { NavLink } from "react-router-dom";
 import { BsCoin } from "react-icons/bs";
-import News from "./Components/Screens/News.jsx";
+import News from "./Components/Screens/News";
 
 function Sidebar() {
 	const [showPost, setShowPost] = useState(false);

@@ -14,6 +14,7 @@ function Post({ post, setpostID, postID }) {
 		Cookies.set("currentPost", event.target.id);
 		setpostID(event.target.id);
 	}
+
 	function doDelete(event) {
 		deletePost(event.target.id);
 	}
@@ -37,9 +38,9 @@ function Post({ post, setpostID, postID }) {
 								{post.text}
 								<div className="postText"></div>
 								<div className="postImageURL">
-									{post.title != "Text" && (
+									{post.title !== "Text" && (
 										<>
-											<img className="image" src={post.title} />
+											<img className="image" src={post.title} alt="" />
 										</>
 									)}
 								</div>

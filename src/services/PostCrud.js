@@ -28,8 +28,6 @@ export const editPost = async (content, postID) => {
   }
 };
 
-
-
 export const getPosts = async () => {
   try {
     let response = await axios.get("https://twitter-clone-backend-production-c9cc.up.railway.app/allposts/")
@@ -39,6 +37,7 @@ export const getPosts = async () => {
     throw error;
   }
 };
+
 export const fetchUserPosts = async (user) => {
   try {
     let response = await axios.get("https://twitter-clone-backend-production-c9cc.up.railway.app/user/")
@@ -51,7 +50,6 @@ export const fetchUserPosts = async (user) => {
     throw error;
   }
 };
-
 
 export const getPostByID = async (id) => {
   try {
@@ -67,6 +65,7 @@ export const createPost = async (content) => {
     if (Cookies.get("AccessToken") === undefined || Cookies.get("AccessToken") === "loggedout") {
       alert("Please log in to create a post!")
     }
+
     const config = {
       headers: {
         "Authorization": `Bearer ${Cookies.get("AccessToken")}`,
@@ -87,7 +86,6 @@ export const createPost = async (content) => {
   }
 };
 
-
 export const deletePost = async (post) => {
   try {
     const config = {
@@ -98,14 +96,8 @@ export const deletePost = async (post) => {
     let response = await axios.delete(`https://twitter-clone-backend-production-c9cc.up.railway.app/user/posts/` + post, config)
     console.log(response)
     window.location.reload()
-
     console.log(post)
   } catch (error) {
     throw error;
   }
-  
 };
-
-
-
-

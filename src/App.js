@@ -7,7 +7,7 @@ import Cookies from "js-cookie";
 import { getPosts } from "./services/PostCrud";
 import Widget from "./Components/Widgets/Widget";
 import News from "./Components/Screens/News.jsx";
-import Postdetail from "./Components/Screens/Postdetail";
+import PostDetail from "./Components/Screens/PostDetail";
 import { fetchUserPosts } from "./services/PostCrud";
 
 function App() {
@@ -55,7 +55,7 @@ function App() {
 					<Route path="/crypto" element={<Widget />} />
 					<Route
 						path="/Post/:id"
-						element={<Postdetail setpostID={setpostID} postID={postID} />}
+						element={<PostDetail setpostID={setpostID} postID={postID} />}
 					/>
 					<Route path="/news" element={<News />} />
 					<Route
