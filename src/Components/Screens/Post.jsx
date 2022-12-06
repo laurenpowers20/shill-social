@@ -6,13 +6,13 @@ import ModalEditTweet from "../Modals/Modal-Edit-Post";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-function Post({ post, setpostID, postID }) {
+function Post({ post, setPostID, postID }) {
 	const [showEdit, setShowEdit] = useState(false);
-	const [editID, seteditID] = useState(0);
+	const [editID, setEditID] = useState(0);
 
 	function sendPostID(event) {
 		Cookies.set("currentPost", event.target.id);
-		setpostID(event.target.id);
+		setPostID(event.target.id);
 	}
 
 	function doDelete(event) {
@@ -21,7 +21,7 @@ function Post({ post, setpostID, postID }) {
 
 	function doEdit(event) {
 		setShowEdit(true);
-		seteditID(event.target.id);
+		setEditID(event.target.id);
 	}
 
 	return (

@@ -3,7 +3,7 @@ import "./Feed.css";
 import Tweetbox from "./Tweetbox";
 import Post from "./Post.jsx";
 
-function Feed({ setToggleApiCall, toggleApiCall, post, postID, setpostID }) {
+function Feed({ setToggleApiCall, toggleApiCall, post, postID, setPostID }) {
 	return (
 		<div className="feed-container">
 			<div className="feed">
@@ -13,7 +13,7 @@ function Feed({ setToggleApiCall, toggleApiCall, post, postID, setpostID }) {
 					toggleApiCall={toggleApiCall}
 				/>
 				<Post
-					setpostID={setpostID}
+					setPostID={setPostID}
 					postID={postID}
 					post={post}
 					setToggleApiCall={setToggleApiCall}

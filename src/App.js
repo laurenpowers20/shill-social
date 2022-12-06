@@ -13,7 +13,7 @@ import { fetchUserPosts } from "./services/PostCrud";
 function App() {
 	const [post, setPosts] = useState();
 	const [toggleApiCall, setToggleApiCall] = useState(false);
-	const [postID, setpostID] = useState();
+	const [postID, setPostID] = useState();
 	const [userPosts, setUserPosts] = useState();
 
 	useEffect(() => {
@@ -47,7 +47,7 @@ function App() {
 								toggleApiCall={toggleApiCall}
 								setToggleApiCall={setToggleApiCall}
 								post={post}
-								setpostID={setpostID}
+								setPostID={setPostID}
 								postID={postID}
 							/>
 						}
@@ -55,7 +55,7 @@ function App() {
 					<Route path="/crypto" element={<Widget />} />
 					<Route
 						path="/Post/:id"
-						element={<PostDetail setpostID={setpostID} postID={postID} />}
+						element={<PostDetail setPostID={setPostID} postID={postID} />}
 					/>
 					<Route path="/news" element={<News />} />
 					<Route

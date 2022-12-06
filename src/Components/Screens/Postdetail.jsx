@@ -4,11 +4,11 @@ import Sidebar from "../../Sidebar";
 import Widget from "../Widgets/Widget";
 import Comments from "./Comments";
 
-function PostDetail({ setpostID, postID }) {
+function PostDetail({ setPostID, postID }) {
 	return (
-		<div className="postdetail">
+		<div className="post-detail">
 			<Sidebar />
-			<Comments setpostID={setpostID} postID={postID} />
+			<Comments setPostID={setPostID} postID={postID} />
 			<Widget />
 		</div>
 	);

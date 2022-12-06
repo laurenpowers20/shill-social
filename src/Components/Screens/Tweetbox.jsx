@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./TweetBox.css";
 import Button from "@mui/material/Button";
 import { createPost } from "../../services/PostCrud";
-import { useState } from "react";
 
 function Tweetbox({ setToggleApiCall, toggleApiCall }) {
 	const [characterCount, setCharacterCount] = useState(0);
@@ -64,23 +63,23 @@ function Tweetbox({ setToggleApiCall, toggleApiCall }) {
 						className="tweetBox-input"
 						id="text"
 						placeholder="What's happening, tweed?"
+						onChange={handleChange}
 						type="text"
 						size="2rem"
-						onChange={handleChange}
 					/>
 					<input
-						id="image"
 						className="tweetBox-inputImage"
+						id="image"
 						placeholder="Enter image URL"
-						type="text"
 						onChange={handleChange}
+						type="text"
 					/>
 				</div>
 				<p className="character-counter">{characterCount}/280</p>
 				<Button
-					variant="outlined"
 					className="feed_tweet_BTN"
 					type="submit"
+					variant="outlined"
 					fullWidth>
 					Post
 				</Button>

@@ -1,53 +1,52 @@
 .tweetBox {
-	background-color: white;
-	padding: 30px;
-	padding-bottom: 0px;
-	border-bottom: 8px solid var(--twitter-background);
+  background-color: white;
+  border-bottom: 8px solid var(--twitter-background);
+  padding-bottom: 0px;
+  padding: 30px;
 }
 
 .form {
   height: 100px;
   margin: 0 auto;
 }
+
 .tweetBox {
-	padding: 20px;
-	display: flex;
+  display: flex;
+  padding: 20px;
 }
 
 .tweetBox-input > textarea {
-	resize: none;
-	flex: 1;
-	margin-left: 10px;
-	font-size: 20px;
-	border: none;
-	width: 100%;
-	padding-left: 10px;
-  text-align: center;
+  border: none;
+  flex: 1;
+  font-size: 20px;
+  margin:0px;
+  resize: none;
+  width: 100%;
 }
 
 .submitButton{
   background-color: var(--money-color) !important;
-  color: white !important;
   border-radius: 30px !important;
-  font-weight: 900 !important;
   border: none !important;
-
+  color: white !important;
+  font-weight: 900 !important;
 }
+
 .tweetBox .feed_tweet_BTN {
-	background-color: var(--money-color) !important;
-	border: none !important;
-	color: white !important;
-	font-weight: 900 !important;
-	text-transform: inherit !important;
-
-	border-radius: 30px !important;
-	width: 80px !important;
-	height: 40px;
-	display: inline-flexbox;
-	margin-left: auto;
-	position: initial;
+  background-color: var(--money-color) !important;
+  border-radius: 30px !important;
+  border: none !important;
+  color: white !important;
+  display: inline-flexbox;
+  font-weight: 900 !important;
+  height: 40px;
+  margin-left: auto;
+  position: initial;
+  text-transform: inherit !important;
+  width: 80px !important;
 }
+
 .tweetBox-inputImage {
-	border: none;
-	padding: 10px;
+  border: none;
+  padding: 10px;
 }
