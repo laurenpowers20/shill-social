@@ -43,5 +43,6 @@
 
 .tweetBox-inputImage {
   border: none;
-  padding: 10px;
+  padding-bottom: 10px;
+  outline: none;
 }

@@ -68,6 +68,7 @@ function Tweetbox({ setToggleApiCall, toggleApiCall }) {
 						size="2rem"
 					/>
 					<input
+						// autoComplete="off" // for some reason if i have this active, it will hide all of the posts on the feed until i inspect element and then they'll show up again. super weird, will deal with eventually
 						className="tweetBox-inputImage"
 						id="image"
 						placeholder="Enter image URL"
