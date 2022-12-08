@@ -8,24 +8,23 @@
 	flex-direction: row;
 }
 
-
 .tweed-title {
+	color: #417e26ed;
+	font-size: 26px;
 	text-align: center;
-  font-size: 26px;
-  color:#417e26ed;
-  text-decoration: underline;
-  text-shadow: 4px;
+	text-decoration: underline;
+	text-shadow: 4px;
 }
 
 .feed {
-	flex: 0.9;
 	border-right: 1px solid var(--twitter-background);
+	flex: 0.9;
 	min-width: fit-content;
 }
 
-.tweetContainer{
+.tweetContainer {
 	flex: 0.7 1;
 	height: 100vh;
-	position: sticky;
 	overflow: scroll;
+	position: sticky;
 }

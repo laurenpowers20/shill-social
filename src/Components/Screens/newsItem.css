@@ -4,10 +4,10 @@
 }
 
 .news-item {
-	width: 100%;
-	padding: 20px;
 	border: 1px solid;
 	margin-bottom: 20px;
+	padding: 20px;
+	width: 100%;
 }
 
 .news-img {
@@ -18,8 +18,9 @@
 	.news-item,
 	.news-app,
 	.news-img {
-		/* height: 100%; */
-		width: 100%;
+		height: 100%;
 		object-fit: cover;
+		width: 100%;
+		/*  */
 	}
 }

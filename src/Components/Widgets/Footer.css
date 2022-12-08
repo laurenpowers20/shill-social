@@ -41,11 +41,7 @@
 }
 
 @media (max-width: 600px) {
-	.footer-user-container {
-		display: none;
-	}
-
-	.footer-sign-in-up-container {
+	.footer-user-container, .footer-sign-in-up-container {
 		display: none;
 	}
 }

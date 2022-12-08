@@ -1,19 +1,17 @@
 import React from "react";
-import "./Postdetail.css"
-import Sidebar from "../../Sidebar"
-import Widget from "../Widgets/Widget"
-import Comments from "./Comments"
+import "./PostDetail.css";
+import Sidebar from "../../Sidebar";
+import Widget from "../Widgets/Widget";
+import Comments from "./Comments";
 
-function Postdetail({setpostID , postID}) {
+function PostDetail({ setPostID, postID }) {
 	return (
-		<div className="postdetail">
-      <Sidebar />
-      <Comments
-        setpostID={setpostID}
-        postID={ postID } />
+		<div className="post-detail">
+			<Sidebar />
+			<Comments setPostID={setPostID} postID={postID} />
 			<Widget />
-    </div>
+		</div>
 	);
 }
 
-export default Postdetail;
+export default PostDetail;
