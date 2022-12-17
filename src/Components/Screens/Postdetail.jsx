@@ -1,5 +1,5 @@
 import React from "react";
-import "./PostDetail.css";
+import "./Post.css"
 import Sidebar from "../../Sidebar";
 import Widget from "../Widgets/Widget";
 import Comments from "./Comments";

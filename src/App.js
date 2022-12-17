@@ -7,7 +7,7 @@ import Cookies from "js-cookie";
 import { getPosts } from "./services/PostCrud";
 import Widget from "./Components/Widgets/Widget";
 import News from "./Components/Screens/News.jsx";
-import PostDetail from "./Components/Screens/PostDetail";
+import PostDetail from "./Components/Screens/Postdetail"
 import { fetchUserPosts } from "./services/PostCrud";
 
 function App() {
