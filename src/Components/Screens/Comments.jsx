@@ -1,5 +1,4 @@
 import "./Comments.css";
-import Tweetbox from "./Tweetbox";
 import React, { useState, useEffect } from "react";
 import { getPostByID } from "../../services/PostCrud";
 import Cookies from "js-cookie";
@@ -75,7 +74,7 @@ function Comments({ postID }) {
 						<br></br>
 						<div className="text">{thisPost.text}</div>
 						<div>
-							{thisPost.title != "Text" && (
+							{thisPost.title !== "Text" && (
 								<>
 									<img className="image" src={thisPost.title} />
 								</>

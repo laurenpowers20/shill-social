@@ -1,6 +1,5 @@
 import "./Modal.css";
 import React, { useState } from "react";
-import Cookies from "js-cookie";
 import { editPost } from "../../services/PostCrud";
 
 function ModalEditTweet(props) {

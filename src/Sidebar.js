@@ -9,7 +9,7 @@ import Logo from "./shill.png";
 import ModalCreateTweet from "./Components/Modals/Modal-Create-Tweet";
 import { NavLink } from "react-router-dom";
 import { BsCoin } from "react-icons/bs";
-import News from "./Components/Screens/News";
+
 
 function Sidebar() {
 	const [showPost, setShowPost] = useState(false);
@@ -42,9 +42,9 @@ function Sidebar() {
 							<SidebarOption Icon={<BsCoin />} text="Crypto" />{" "}
 						</NavLink>
 
-						<NavLink to="/news">
+						{/* <NavLink to="/news">
 							<SidebarOption Icon={<ListAltIcon />} text="News" />{" "}
-						</NavLink>
+						</NavLink> */}
 					</div>
 
 					{/* this is the 'tweet' button */}

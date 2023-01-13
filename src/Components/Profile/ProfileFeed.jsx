@@ -52,7 +52,7 @@ function ProfileFeed({ setToggleApiCall, toggleApiCall, post }) {
           <h1>{Cookies.get("User")}</h1>
         </div>
         <p>Joined {createdDate}</p>
-        <h2 className="tweed-title">Your Tweeds</h2>
+        <h2 className="tweed-title">Your Shills</h2>
 
         <div className="tweetContainer">
           {displayPost != null && (
