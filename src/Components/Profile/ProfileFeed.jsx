@@ -25,7 +25,6 @@ function ProfileFeed({ setToggleApiCall, toggleApiCall, post }) {
       let totalPosts = response.data.post_owner;
       let storePosts = [];
       for (let i = 0; i < totalPosts.length; i++) {
-        console.log(totalPosts);
         let response = await axios.get(
           "https://twitter-clone-backend-production-c9cc.up.railway.app/allposts/" +
             totalPosts[i]
